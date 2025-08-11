@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.cs110301assignmentu8.FormController"
+      alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #87CEEB, #4682B4);">
+    
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+    
+    <!-- Header -->
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Weather Application" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        <Label text="Enter coordinates to view weather" style="-fx-font-size: 16px; -fx-text-fill: white;"/>
+    </VBox>
+    
+    <!-- Form Container -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10;">
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+        
+        <Label text="Geographic Coordinates" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2E4053;"/>
+        
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="latitudeField" promptText="Enter latitude (-90 to 90)" 
+                      style="-fx-font-size: 14px; -fx-background-radius: 5;"/>
+            <TextField fx:id="longitudeField" promptText="Enter longitude (-180 to 180)" 
+                      style="-fx-font-size: 14px; -fx-background-radius: 5;"/>
+        </VBox>
+        
+        <Button text="View Weather" onAction="#handleSubmit" 
+                style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 5; -fx-min-width: 150;"/>
+    </VBox>
+    
+    <!-- Example coordinates -->
+    <VBox alignment="CENTER" spacing="5" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 8;">
+        <padding>
+            <Insets top="10" right="15" bottom="10" left="15"/>
+        </padding>
+        <Label text="Example coordinates:" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2E4053;"/>
+        <Label text="Hanoi: 21.139, 105.502" style="-fx-font-size: 12px; -fx-text-fill: #34495E;"/>
+        <Label text="Ho Chi Minh City: 10.823, 106.629" style="-fx-font-size: 12px; -fx-text-fill: #34495E;"/>
+    </VBox>
+    
+</VBox>
